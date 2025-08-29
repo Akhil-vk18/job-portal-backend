@@ -23,7 +23,7 @@ Steps for setting up will be added as development progresses.
 ## TODO (Development Roadmap)
 
 - [ ] Initialize Java project structure
-- [ ] Set up MySQL database and create tables
+- [x] Set up MySQL database and create tables
 - [ ] Connect MySQL with Java using JDBC
 - [ ] Create a simple Servlet to fetch jobs and display in terminal (for testing)
 - [ ] Create basic HTML frontend pages:
