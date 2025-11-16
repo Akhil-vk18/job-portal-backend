@@ -3,6 +3,8 @@ package com.jobportal.jobportal.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
+
 @Entity(name = "jobs")
 public class Jobs {
     @Id
@@ -12,7 +14,9 @@ public class Jobs {
     private String requirements;
     private String experience;
     private String location;
-    private String deadline;
+    private LocalDate postedDate;
+    private LocalDate deadline;
+    private String applylink;
 
     @Override
     public String toString() {
@@ -23,7 +27,8 @@ public class Jobs {
                 ", requirements='" + requirements + '\'' +
                 ", experience='" + experience + '\'' +
                 ", location='" + location + '\'' +
-                ", deadline='" + deadline + '\'' +
+                ", postedDate=" + postedDate +
+                ", deadline=" + deadline +
                 ", applylink='" + applylink + '\'' +
                 '}';
     }
@@ -76,11 +81,20 @@ public class Jobs {
         this.location = location;
     }
 
-    public String getDeadline() {
+
+    public LocalDate getPostedDate() {
+        return postedDate;
+    }
+
+    public void setPostedDate(LocalDate postedDate) {
+        this.postedDate = postedDate;
+    }
+
+    public LocalDate getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(String deadline) {
+    public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
     }
 
@@ -92,5 +106,5 @@ public class Jobs {
         this.applylink = applylink;
     }
 
-    private String applylink;
+
 }

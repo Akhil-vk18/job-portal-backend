@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/jobs")
 public class JobController {
@@ -16,7 +16,7 @@ public class JobController {
     Jobsrepo jobsrepo;
     @GetMapping("")
     public List<Jobs> jobsList(){
-        return jobsrepo.findAll();
+        return jobsrepo.findAllByOrderByPostedDateDesc();
     }
 
 //    @GetMapping("/search/{title}")
