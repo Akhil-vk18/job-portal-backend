@@ -1,8 +1,6 @@
 package com.jobportal.jobportal.model;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
 import java.time.LocalDate;
 
 @Entity(name = "jobs")
