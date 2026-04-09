@@ -1,13 +1,18 @@
 package com.jobportal.jobportal.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.jobportal.jobportal.model.Jobs;
 import com.jobportal.jobportal.repository.Jobsrepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-// @CrossOrigin(origins = "*")-
+@CrossOrigin(origins = "https://infotech-careers.vercel.app")
 @RestController
 @RequestMapping("/api/jobs")
 public class JobController {
